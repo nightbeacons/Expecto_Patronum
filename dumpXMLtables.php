@@ -15,7 +15,6 @@ $outDir = "/path/to/output/directory/";
 
 // END CONFIGURATION
 
-
 $db =  new mysqli($dbserver, $dbuser, $dbpass, $dbname);
   if (mysqli_connect_errno()){
   printf("Connection failed: %s\n", mysqli_connect_error());
