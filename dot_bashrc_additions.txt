@@ -1,0 +1,21 @@
+export EDITOR=vim
+
+# Safety Nets
+alias rm='rm -i'
+alias mv='mv -i'
+alias cp='cp -i'
+alias dc='cd'
+
+# Tools
+alias numusr='netstat -an | egrep "443|80" |wc -l'
+alias h='history'
+alias cpuinfo='lscpu'
+
+# Functions
+dos2unix() { cat $1 | tr -d '\015' > $2 ;}
+unix2dos() { cat $1 | sed 's/$/\r/' > $2 ;}
+dircmp()  { diff -q -r $1 $2 ;}
+dircmpdiff(){ diff -q -r $1 $2 | sed 's/^Files /diff /g;s/ and /  /g;s/differ$//g' ;}
+
+set -o noclobber
+
