@@ -10,6 +10,7 @@ alias dc='cd'
 alias numusr='netstat -an | egrep "443|80" |wc -l'
 alias h='history'
 alias cpuinfo='lscpu'
+alias grin='grep -rin'
 
 # Functions
 dos2unix() { cat $1 | tr -d '\015' > $2 ;}
