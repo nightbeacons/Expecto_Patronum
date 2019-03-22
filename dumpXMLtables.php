@@ -5,6 +5,10 @@
 
 // Keeping this information here is not terribly secure
 // For use in the real world, include these from a separate (secured) file
+// or (even better) use .mulogin.cnf -- an encryped binary file
+//  See https://dev.mysql.com/doc/refman/8.0/en/mysql-config-editor.html
+//      https://opensourcedbms.com/dbms/passwordless-authentication-using-mysql_config_editor-with-mysql-5-6/
+
 $dbserver = "YOUR_DB_HOST";
 $dbuser="YOUR_DB_USER";
 $dbpass="YOUR_DB_PASSWORD";

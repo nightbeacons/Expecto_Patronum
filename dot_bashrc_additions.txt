@@ -1,16 +1,25 @@
-export EDITOR=vim
 
-# Safety Nets
+# Safety Nets and other
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
 alias dc='cd'
+alias h='history'
+
 
 # Tools
 alias numusr='netstat -an | egrep "443|80" |wc -l'
 alias h='history'
 alias cpuinfo='lscpu'
 alias grin='grep -rin'
+
+# Export
+export EDITOR=vim
+export PS1='\@ \[\033[01;31m\]\u@\H:\[\033[01;34m\] \w \$\[\033[00m\] '
+export HISTTIMEFORMAT="[%Y-%m-%d %T] "
+export HISTCONTROL=erasedups
+export HISTSIZE=10000
+shopt -s histappend
 
 # Functions
 dos2unix() { cat $1 | tr -d '\015' > $2 ;}
